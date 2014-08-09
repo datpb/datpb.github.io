@@ -21,6 +21,7 @@ With a rails app that is using rails < 2.2 and ruby 1.8.7, when we config to sen
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
+    
     ```
     
 Restart your app and test it.
@@ -30,6 +31,7 @@ If you’re running Rails >= 2.2.1 [RC2] and Ruby 1.8.7, you don’t need the sc
 All You need to do is:
 
     ```ruby
+    
     ActionMailer::Base.smtp_settings = {
         :enable_starttls_auto => true
     }
