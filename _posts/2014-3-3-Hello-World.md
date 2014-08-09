@@ -8,7 +8,7 @@ With a rails app that is using rails < 2.2 and ruby 1.8.7, when we config to sen
 - Step 1: Copy [smtp-tls.rb](https://github.com/ambethia/smtp-tls/blob/master/lib/smtp-tls.rb) to lib folder in your app.
 - Step 2: Create a file in config/initializers folder in your app with the content like: 
     
-    ```
+    ```ruby
     
     require 'smtp-tls'
 
@@ -28,7 +28,8 @@ Restart your app and test it.
 If you’re running Rails >= 2.2.1 [RC2] and Ruby 1.8.7, you don’t need the script (smtp-tls) above. Ruby 1.8.7 supports SMTP TLS and Rails 2.2.1 ships with an option to enable it if you’re running Ruby 1.8.7.
 
 All You need to do is:
-    ```
+
+    ```ruby
     ActionMailer::Base.smtp_settings = {
         :enable_starttls_auto => true
     }
